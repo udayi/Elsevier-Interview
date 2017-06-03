@@ -1,0 +1,37 @@
+package com.elsevier.education;
+
+import java.util.Set;
+
+// Make class as final so we cannot create subclass
+public  class Exercise1 {
+
+	public static class Person {
+		
+		private Set<String> phoneNumbers;
+		private String firstName;
+		private String lastName;
+		
+		public Person() {
+		}
+//Made class as final so we cannot create subclass
+     public static final class Person {
+//Made all the class variables are final so we cannot change the value		
+	private final Set<String> phoneNumbers;
+	private final String firstName;
+	private  final String lastName;
+		
+	public Person() {
+		}
+//used parameterized constructor
+        public Person(Set<String>phoneNumber, String firstName,String lastName){
+             this.phoneNumber = phoneNumber;
+             this.firstName = firstName;
+             this.lastName = lastName; 
+}
+//No setter methods
+		public Set<String> getPhoneNumbers() {
+			return phoneNumbers;
+		}
+		
+	}
+}

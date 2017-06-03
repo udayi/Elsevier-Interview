@@ -1,0 +1,29 @@
+package com.elsevier.education;
+
+/**
+TODO: Turn the "Singleton" class into an actual singleton. The main() method should still call .doSomething().
+*/
+public class Exercise5 {
+	
+	public static class Singleton {
+        private static Singlton singltonObj;
+/**
+ creat private constructor to avoid object intialization outside the class 
+*/
+         private Singlton(){
+  } 
+	 public void doSomething() {
+	 System.out.println("Doing something....");
+	    }
+         public static Singlton getSingltonInstance(){
+         if(singltonObj == null){
+         singltonObj = new Singlton(); 
+      }
+       return singltonObj;
+ }		
+
+      public static void main(String args[]){
+      Singlton st = Singlton.getSingltonInstance();
+      st.doSomething();
+    }
+}
